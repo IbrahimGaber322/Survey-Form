@@ -12,45 +12,57 @@
     
     <header id="header">
         <h1 class="text-center" id="title">freeCodeCamp Survey Form</h1>
-        <p class="text-center">Thank you for taking the time to help us improve the platform</p>
+        <p id="description"class="text-center">Thank you for taking the time to help us improve the platform</p>
     </header>
 
     <div class="container-fluid">
       
-        <form action="">
+        <form action="" id="survey-form">
           <div class="d-flex justify-content-center mx-auto custom-form rounded row">
           <div class="mb-3 custom-padding">
-            <label for="basic-url" class="form-label">Name</label>
+            <label for="name" class="form-label" id="name-label">Name</label>
             <div class="input-group">
               <input
                 type="text"
                 class="form-control"
-                id="basic-url"
+                id="name"
+                placeholder="Enter your name"
                 aria-describedby="basic-addon3"
+                required
               />
             </div>
           </div>
           <div class="mb-3 custom-padding">
-            <label for="basic-url" class="form-label">Email</label>
+            <label for="email" class="form-label" id="email-label">Email</label>
             <div class="input-group">
               <input
                 type="email"
                 class="form-control"
-                id="basic-url"
+                id="email"
+                placeholder="Enter your email"
                 aria-describedby="basic-addon3"
+                required
               />
             </div>
           </div>
           <div class="mb-3 custom-padding">
-            <label for="basic-url" class="form-label">Age</label>
+            <label for="number" class="form-label" id="number-label">Age</label>
             <div class="input-group">
-                <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Age">
+                <input aria-placeholder="Pick your age" type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Age">
             </div>
           </div>
           <div class="mb-3 custom-padding">
             <label for="basic-url" class="form-label">Which option best describes your current role?</label>
             <div class="input-group">
-              <select class="form-select" id="inputGroupSelect01">
+              <select style= "display: none;" name="" id="dropdown" disabled="disabled">
+                <option selected>Choose...</option>
+                <option value="1">Student</option>
+                <option value="2">Full time job</option>
+                <option value="3">Full time Learner</option>
+                <option value="4">Prefer not to say</option>
+                <option value="5">other</option>
+              </select>
+              <select class="form-select" name="selectOption" id="inputGroupSelect01">
                 <option selected>Choose...</option>
                 <option value="1">Student</option>
                 <option value="2">Full time job</option>
@@ -74,7 +86,7 @@
           <div class="mb-3 custom-padding">
             <label for="basic-url" class="form-label">What is your favorite feature of freeCodeCamp?</label>
             <div class="input-group">
-              <select class="form-select" id="inputGroupSelect01">
+              <select class="form-select" name="favoriteFeature" id="inputGroupSelect01">
                 <option selected>Select an option</option>
                 <option value="1">Challenges</option>
                 <option value="2">Projects</option>
@@ -88,39 +100,39 @@
             <div class="input-group">
                 <ul class="list-group">
                     <li class="list-group-item">
-                      <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                      <input class="form-check-input me-1" type="checkbox" value="1" id="firstCheckbox">
                       <label class="form-check-label " for="firstCheckbox">Front-end Projects</label>
                     </li>
                     <li class="list-group-item">
-                      <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                      <input class="form-check-input me-1" type="checkbox" value="2" id="secondCheckbox">
                       <label class="form-check-label" for="secondCheckbox">Back-end Projects</label>
                     </li>
                     <li class="list-group-item">
-                      <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                      <input class="form-check-input me-1" type="checkbox" value="3" id="thirdCheckbox">
                       <label class="form-check-label" for="thirdCheckbox">Data Visualization</label>
                     </li>
                     <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                        <input class="form-check-input me-1" type="checkbox" value="4" id="thirdCheckbox">
                         <label class="form-check-label" for="thirdCheckbox">Challenges</label>
                     </li>
                     <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                        <input class="form-check-input me-1" type="checkbox" value="5" id="thirdCheckbox">
                         <label class="form-check-label" for="thirdCheckbox">Open Source Community</label>
                     </li>
                     <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                        <input class="form-check-input me-1" type="checkbox" value="6" id="thirdCheckbox">
                         <label class="form-check-label" for="thirdCheckbox">Gitter help rooms</label>
                     </li>
                     <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                        <input class="form-check-input me-1" type="checkbox" value="7" id="thirdCheckbox">
                         <label class="form-check-label" for="thirdCheckbox">Videos</label>
                     </li>
                     <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                        <input class="form-check-input me-1" type="checkbox" value="8" id="thirdCheckbox">
                         <label class="form-check-label" for="thirdCheckbox">City Meetups</label>
                     </li>
                     <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                        <input class="form-check-input me-1" type="checkbox" value="9" id="thirdCheckbox">
                         <label class="form-check-label" for="thirdCheckbox">Additional Courses</label>
                     </li>
                   </ul>
@@ -136,7 +148,7 @@
             </div>
           </div>
           
-            <button class="btn btn-success m-3 custom-button" type="button">Submit</button>
+            <button id="submit" value="submit" class="btn btn-success m-3 custom-button" type="button">Submit</button>
           </div>
         </form>
       
